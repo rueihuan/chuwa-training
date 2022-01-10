@@ -1,0 +1,21 @@
+body {
+  padding: 12px 24px;
+}
+
+table td, table th {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+input#search-bar {
+  height: 24px;
+  padding: 4px 12px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 200px;
+}
+
+input#search-bar::placeholder {
+  font-size: 16px;
+}
