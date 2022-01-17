@@ -1,0 +1,12 @@
+body {
+  padding: 12px 24px;
+}
+
+li, button {
+  cursor: pointer;
+  margin: 4px 8px;
+}
+
+li.completed span {
+  text-decoration: line-through;
+}
