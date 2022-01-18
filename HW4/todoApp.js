@@ -16,6 +16,7 @@ btn.onclick = () => {
   const todo = { content: input.value, isCompleted: false };
   todoApi.addTodo(todo).then(() => {
     createItem(todo, list);
+    input.value = "";
   });
 };
 
@@ -42,7 +43,7 @@ function createItem(todo, list) {
   li.appendChild(span);
 
   span.ondblclick = () => {
-    const idx = getIndex(list, li)
+    const idx = getIndex(list, li);
     todoApi.modTodo(idx).then(() => {
       if (li.classList.contains("completed")) {
         li.classList.remove("completed");
@@ -57,15 +58,15 @@ function createItem(todo, list) {
   li.appendChild(delBtn);
 
   delBtn.onclick = () => {
-    const idx = getIndex(list, li)
+    const idx = getIndex(list, li);
     todoApi.delTodo(idx).then(() => {
-      list.removeChild(li)
+      list.removeChild(li);
     });
   };
 }
 
 function getIndex(list, li) {
-  const children = list.children
+  const children = list.children;
   for (let i = 0; i < children.length; i++) {
     if (children[i] === li) return i;
   }
