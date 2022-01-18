@@ -45,11 +45,7 @@ function createItem(todo, list) {
   span.ondblclick = () => {
     const idx = getIndex(list, li);
     todoApi.modTodo(idx).then(() => {
-      if (li.classList.contains("completed")) {
-        li.classList.remove("completed");
-      } else {
-        li.classList.add("completed");
-      }
+      li.classList.toggle("completed")
     });
   };
 
