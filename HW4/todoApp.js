@@ -41,7 +41,7 @@ function createItem(todo, list) {
   span.textContent = todo.content;
   li.appendChild(span);
 
-  span.onclick = () => {
+  span.ondblclick = () => {
     const idx = getIndex(list, li)
     todoApi.modTodo(idx).then(() => {
       if (li.classList.contains("completed")) {

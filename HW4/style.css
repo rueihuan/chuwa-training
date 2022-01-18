@@ -5,6 +5,7 @@ body {
 li, button {
   cursor: pointer;
   margin: 4px 8px;
+  user-select: none;
 }
 
 li.completed span {
